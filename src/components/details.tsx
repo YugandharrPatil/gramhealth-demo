@@ -3,7 +3,8 @@ import Icon from "./icon";
 import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 
-import { default as check, default as delivery } from "../../public/icons/check.png";
+import check from "../../public/icons/check.png";
+import delivery from "../../public/icons/delivery.png";
 import handshake from "../../public/icons/handshake.png";
 import shield from "../../public/icons/shield.png";
 
