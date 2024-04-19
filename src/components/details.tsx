@@ -1,17 +1,16 @@
 import Icon from "./icon";
 
-import { Input } from "@/app/components/ui/input";
+import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 
-import check from "../../../public/icons/check.png";
-import delivery from "../../../public/icons/delivery.png";
-import handshake from "../../../public/icons/handshake.png";
-import shield from "../../../public/icons/shield.png";
+import { default as check, default as delivery } from "../../public/icons/check.png";
+import handshake from "../../public/icons/handshake.png";
+import shield from "../../public/icons/shield.png";
 
-import box from "../../../public/card-icons/box.png";
-import deliveryBox from "../../../public/card-icons/delivery.png";
-import feedback from "../../../public/card-icons/feedback.png";
-import hands from "../../../public/card-icons/hands.png";
+import box from "../../public/card-icons/box.png";
+import deliveryBox from "../../public/card-icons/delivery.png";
+import feedback from "../../public/card-icons/feedback.png";
+import hands from "../../public/card-icons/hands.png";
 import Card from "./card";
 
 export default function Details() {

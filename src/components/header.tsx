@@ -1,4 +1,4 @@
-import backgroundImage from "../../../public/background.png";
+import backgroundImage from "../../public/background.png";
 
 import { Montserrat, Poppins } from "next/font/google";
 
