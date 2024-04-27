@@ -1,30 +1,57 @@
-import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Montserrat } from "next/font/google";
+import Link from "next/link";
 
 const montserratSemibold = Montserrat({
-	weight: ["600"],
-	subsets: ["latin"],
+  weight: ["600"],
+  subsets: ["latin"],
 });
 
 export default function Footer() {
-	return (
-		<div className="bg-[#00367F]">
-			<div className="h-80 text-center text-white py-4 flex flex-col justify-between">
-				<div className="">
-					<h1 className="pt-12 text-4xl font-semibold">The mission is to Save live with medicine</h1>
-					<p className="mt-4 md:w-2/3 text-lg mx-auto">
-						Be the pioneer in accessing medication within minutes, ensuring your health needs are addressed promptly and efficiently.
-					</p>
-				</div>
-				<div className="flex w-fit mx-auto">
-					<p className={`mr-2 font-semibold uppercase ${montserratSemibold.className}`}>Connect with Us</p>
-					<FontAwesomeIcon icon={faFacebook} className="w-5 mb-1 mr-4 inline text-white" />
-					<FontAwesomeIcon icon={faInstagram} className="w-5 mb-1 mr-4 inline text-white" />
-					<FontAwesomeIcon icon={faTwitter} className="w-5 mb-1 mr-4 inline text-white" />
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className="h-96 bg-[#00367F] px-2 xs:h-72 lg:h-60">
+      <div className="flex h-full flex-col justify-between text-center text-white">
+        <div className="">
+          <h1 className="pt-12 text-4xl font-semibold">
+            The mission is to Save live with medicine
+          </h1>
+          <p className="mx-auto mt-4 text-lg md:w-2/3">
+            Be the pioneer in accessing medication within minutes, ensuring your
+            health needs are addressed promptly and efficiently.
+          </p>
+        </div>
+        <div className="mx-auto mb-4 flex w-fit">
+          <p
+            className={`mr-2 font-semibold uppercase ${montserratSemibold.className}`}
+          >
+            Connect with Us
+          </p>
+          <Link href="#">
+            <FontAwesomeIcon
+              icon={faFacebook}
+              className="mb-1 mr-4 inline w-5 text-white hover:text-[#1877F2]"
+            />
+          </Link>
+          <Link href="#">
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className="mb-1 mr-4 inline w-5 text-white hover:text-[#C13584]"
+            />
+          </Link>
+          <Link href="#">
+            <FontAwesomeIcon
+              icon={faTwitter}
+              className="mb-1 mr-4 inline w-5 text-white hover:text-[#1DA1F2]"
+            />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }

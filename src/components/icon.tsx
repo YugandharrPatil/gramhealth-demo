@@ -1,14 +1,20 @@
 import Image, { StaticImageData } from "next/image";
 
-type IconPropTypes = { link: StaticImageData; text: string };
+type IconPropTypes = { imgSrc: StaticImageData; text: string };
 
-export default function Icon({ link, text }: IconPropTypes) {
-	return (
-		<div className="">
-			<div className="relative h-24 w-24 rounded-full inline-block bg-black text-white bg-gradient-to-r from-[#004AAD] from-30% to-[#2EEB31]">
-				<Image src={link} alt="fuck" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14" />
-			</div>
-			<p className="text-center font-semibold w-2/3 mx-auto">{text}</p>
-		</div>
-	);
+export default function Icon({ imgSrc, text }: IconPropTypes) {
+  return (
+    <div className="h-52 w-52 max-xl:m-6">
+      <div className="relative inline-block h-40 w-40 rounded-full bg-black bg-gradient-to-r from-[#004AAD] from-30% to-[#2EEB31] text-white">
+        <Image
+          src={imgSrc}
+          alt="fuck"
+          className="absolute left-1/2 top-1/2 w-24 -translate-x-1/2 -translate-y-1/2"
+        />
+      </div>
+      <p className="mx-auto text-center text-xl font-semibold md:text-2xl">
+        {text}
+      </p>
+    </div>
+  );
 }

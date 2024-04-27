@@ -1,61 +1,61 @@
 import Icon from "./icon";
 
+// UI ELEMENTS
 import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 
-import check from "../../public/icons/check.png";
-import delivery from "../../public/icons/delivery.png";
-import handshake from "../../public/icons/handshake.png";
-import shield from "../../public/icons/shield.png";
+import { cardContent, iconContent } from "@/static/details-content";
 
-import box from "../../public/card-icons/box.png";
-import deliveryBox from "../../public/card-icons/delivery.png";
-import feedback from "../../public/card-icons/feedback.png";
-import hands from "../../public/card-icons/hands.png";
 import Card from "./card";
 
-export default function Details() {
-	return (
-		<main className="text-center py-12 container">
-			<h1 className="text-3xl font-semibold">How GramHealth Partners With Trusted Pharmacies</h1>
-			<div className="flex flex-wrap justify-center gap-2 w-fit mx-auto mt-8">
-				<Icon link={handshake} text="Trusted Pharmacies" />
-				<Icon link={shield} text="100% Genuine Medicines" />
-				<Icon link={check} text="Quality Assurance" />
-				<Icon link={delivery} text="DOOR STEP DELIVERY" />
-			</div>
-			<h1 className="text-3xl font-semibold mt-12">How GramHealth Partners With Trusted Pharmacies</h1>
-			<div className="flex flex-wrap gap-12 justify-center">
-				<Card
-					image={box}
-					title="Specialized Packaging Solutions"
-					body="GramHealth's specialized packaging ensures secure transport, shielding medicines from damage, safeguarding their potency and integrity throughout delivery."
-				/>
-				<Card
-					image={deliveryBox}
-					title="Lightning Fast Delivery"
-					body="Skip the pharmacy lines and multiple trips. With GramHealth's 30-minute medicine delivery, order and pay for your medications online with ease. Just a few clicks, and your meds are at your doorstep, saving you time and hassle."
-				/>
-				<Card
-					image={hands}
-					title="Careful Handling"
-					body="Our delivery personnel are trained to handle medications with utmost care and attention. They follow strict protocols for handling, loading, and unloading to minimize the risk of damage. Additionally, fragile or delicate items are marked and handled with extra caution"
-				/>
-				<Card
-					image={feedback}
-					title="Customer Feedback"
-					body="Our delivery personnel are trained to handle medications with utmost care and attention. They follow strict protocols for handling, loading, and unloading to minimize the risk of damage. Additionally, fragile or delicate items are marked and handled with extra caution"
-				/>
-			</div>
-			<div className="mt-24">
-				<h3 className="uppercase text-center font-semibold text-lg">get early access</h3>
-				<div className="flex max-sm:flex-col gap-3 mt-2 mx-auto">
-					<Input />
-					<Button className="uppercase text-white font-bold" variant="gradient">
-						join waitlist
-					</Button>
-				</div>
-			</div>
-		</main>
-	);
+// FONTS
+import { arialRoundedMTBold } from "@/utils/fonts/fonts";
+
+const textContent = {
+  heading1: "How GramHealth Partners With Trusted Pharmacies",
+  heading2: "How GramHealth Deliver Medicines Without Damage",
+};
+
+export default async function Details() {
+  return (
+    <main className="container py-20 text-center">
+      <h1
+        className={`details-heading ${arialRoundedMTBold.variable} font-arialRoundedMTBold`}
+      >
+        {textContent.heading1}
+      </h1>
+      <div className="mt-16 flex flex-wrap justify-around">
+        <Icon {...iconContent.icon1} />
+        <Icon {...iconContent.icon2} />
+        <Icon {...iconContent.icon3} />
+        <Icon {...iconContent.icon4} />
+      </div>
+      <hr className="mx-auto my-24 block w-1/12 border-t-8 border-dotted border-gray-400" />
+      <h1
+        className={`details-heading mt-4 ${arialRoundedMTBold.variable} font-arialRoundedMTBold`}
+      >
+        {textContent.heading2}
+      </h1>
+      <div className="mt-8 flex flex-wrap justify-around">
+        <Card {...cardContent.card1} />
+        <Card {...cardContent.card2} />
+        <Card {...cardContent.card3} />
+        <Card {...cardContent.card4} />
+      </div>
+      <div className="mt-24">
+        <h3 className="text-center text-lg font-semibold uppercase">
+          get early access
+        </h3>
+        <div className="mx-auto mt-4 flex gap-3 max-lg:flex-col lg:w-1/2">
+          <Input
+            className="border border-black"
+            placeholder="Enter your email here"
+          />
+          <Button className="font-bold uppercase text-white" variant="gradient">
+            join waitlist
+          </Button>
+        </div>
+      </div>
+    </main>
+  );
 }
