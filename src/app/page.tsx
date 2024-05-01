@@ -4,11 +4,11 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 
 export default function HomePage() {
-	return (
-		<>
-			<Header />
-			<Details />
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <Header />
+      <Details />
+      <Footer />
+    </>
+  );
 }

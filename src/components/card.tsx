@@ -11,14 +11,16 @@ type CardPropTypes = {
 
 export default function Card({ imgSrc, title, body }: CardPropTypes) {
   return (
-    <div className="m-4 w-72 rounded-lg bg-gray-200 px-6 py-8 shadow-[0_5px_10px_0px_rgba(0,0,0,0.3)]">
-      <Image src={imgSrc} alt="fuck" className="mx-auto w-14" />
+    <div className="max-w-36 rounded-md bg-gray-200 p-4 shadow-[0_5px_10px_0px_rgba(0,0,0,0.3)] min-[440px]:max-w-44 sm:max-w-64 sm:p-6 md:max-w-72">
+      <Image src={imgSrc} alt="fuck" className="mx-auto max-md:w-10" />
       <h1
-        className={`mt-3 text-2xl font-bold ${montserrat.variable} font-montserrat`}
+        className={`mt-3 font-bold sm:text-2xl ${montserrat.variable} font-montserrat`}
       >
         {title}
       </h1>
-      <p className={`mx-auto mt-4 text-xl ${poppins.variable} font-poppins`}>
+      <p
+        className={`mx-auto mt-4 text-left text-xs sm:text-lg md:text-xl ${poppins.variable} font-poppins`}
+      >
         {body}
       </p>
     </div>
