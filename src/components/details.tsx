@@ -1,7 +1,6 @@
+import Image from "next/image";
+import waitlistImage from "../../public/contact-image.png";
 import Icon from "./icon";
-
-// UI ELEMENTS
-import { Input } from "@/components/ui/input";
 
 import { cardContent, iconContent } from "@/static/details-content";
 
@@ -10,7 +9,8 @@ import Card from "./card";
 // FONTS
 import { arialRoundedMTBold } from "@/utils/fonts/fonts";
 
-import { montserrat } from "@/utils/fonts/fonts";
+import { inter, montserrat } from "@/utils/fonts/fonts";
+import Form from "./form";
 
 const textContent = {
   heading1: "How GramHealth Partners With Trusted Pharmacies",
@@ -44,19 +44,26 @@ export default async function Details() {
         <Card {...cardContent.card4} />
       </div>
       <div className="mt-24">
-        <h3 className="text-center text-lg font-semibold uppercase">
+        <h3 className="my-4 text-center text-lg font-semibold uppercase">
           get early access
         </h3>
-        <div className="mx-auto mt-4 flex gap-3 rounded-md bg-gradient-to-r from-[#004AAD] from-60% via-[#2EEB31] to-[#004AAD] p-1 md:w-2/3 xl:w-1/2">
-          <Input
-            className="w-full border border-black"
-            placeholder="Enter your email here"
+        <div className="flex rounded-xl bg-[#004AAD]">
+          <Image
+            src={waitlistImage}
+            priority={false}
+            alt="image"
+            className="w-5/12"
           />
-          <button
-            className={`font-bold uppercase text-white transition duration-300 ease-in-out hover:bg-black hover:bg-opacity-20 max-sm:w-60 ${montserrat.variable} w-44 rounded-sm font-montserrat`}
-          >
-            join waitlist
-          </button>
+          <div className="flex w-7/12 items-center justify-center">
+            <div className="w-2/3">
+              <h1
+                className={`${inter.variable} mb-5 text-left font-inter text-lg font-semibold text-white md:text-2xl lg:text-3xl`}
+              >
+                Get on the waiting list
+              </h1>
+              <Form />
+            </div>
+          </div>
         </div>
       </div>
     </main>

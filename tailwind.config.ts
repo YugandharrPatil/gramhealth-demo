@@ -28,6 +28,7 @@ const config = {
         montserrat: ["-var(--font-montserrat)"],
         poppins: ["-var(--font-montserrat)"],
         arialRoundedMTBold: ["-var(--font-arialRoundedMTBold)"],
+        inter: ["-var(--font-inter)"],
       },
       colors: {
         border: "hsl(var(--border))",

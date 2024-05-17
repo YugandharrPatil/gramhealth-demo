@@ -32,21 +32,21 @@ export const cardContent = {
   card1: {
     imgSrc: box,
     title: "Specialized Packaging Solutions",
-    body: "GramHealth's specialized packaging ensures secure transport, shielding medicines from damage, safeguarding their potency and integrity throughout delivery.",
+    body: "Secure Packaging for Safe Medicine Delivery.",
   },
   card2: {
     imgSrc: deliveryBox,
     title: "Lightning Fast Delivery",
-    body: "Skip the pharmacy lines and multiple trips. With GramHealth's 30-minute medicine delivery, order and pay for your medications online with ease. Just a few clicks, and your meds are at your doorstep, saving you time and hassle.",
+    body: "30-minute meds from GramHealth: Order, pay, and relax. No lines, just convenience!",
   },
   card3: {
     imgSrc: hands,
     title: "Careful Handling",
-    body: "Our delivery personnel are trained to handle medications with utmost care and attention. They follow strict protocols for handling, loading, and unloading to minimize the risk of damage. Additionally, fragile or delicate items are marked and handled with extra caution",
+    body: "Your Meds, Handled with Care! Our trained personnel follow strict protocols to ensure safe delivery, even for fragile items",
   },
   card4: {
     imgSrc: feedback,
     title: "Customer Feedback",
-    body: "Our delivery personnel are trained to handle medications with utmost care and attention. They follow strict protocols for handling, loading, and unloading to minimize the risk of damage. Additionally, fragile or delicate items are marked and handled with extra caution",
+    body: "Your Opinion Counts: Rate Your Experience, Help Us Serve You Better!",
   },
 };

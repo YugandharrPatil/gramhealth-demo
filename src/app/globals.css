@@ -78,3 +78,11 @@
 .details-heading {
   @apply text-3xl font-semibold md:text-4xl xl:text-5xl;
 }
+
+.grad {
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(to top, #2eeb31, #004aad) border-box;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+}
