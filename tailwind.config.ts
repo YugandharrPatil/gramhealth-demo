@@ -10,23 +10,30 @@ const config = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      xs: "360px",
+      sm: "576px", // Improved handling for smaller devices
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px", // Traditional large desktops
+      "2xl": "1600px", // Enhanced for 2K displays
+      "3xl": "2000px", // Suitable for most 4K displays
+      // "4xl": "2560px",
+    },
     container: {
       center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      // padding: "2rem",
+      // screens: {
+      //   "2xl": "1400px",
+      // },
     },
     extend: {
-      screens: {
-        xs: "384px",
-      },
-      fontSize: {
-        "10xl": "9rem",
-      },
+      // fontSize: {
+      //   "10xl": "9rem",
+      // },
       fontFamily: {
         montserrat: ["-var(--font-montserrat)"],
-        poppins: ["-var(--font-montserrat)"],
+        poppins: ["-var(--font-poppins)"],
         arialRoundedMTBold: ["-var(--font-arialRoundedMTBold)"],
         inter: ["-var(--font-inter)"],
       },

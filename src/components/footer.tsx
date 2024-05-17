@@ -15,11 +15,11 @@ const montserratSemibold = Montserrat({
 
 export default function Footer() {
   return (
-    <div className="h-96 bg-[#00367F] px-2 xs:h-72 lg:h-60">
+    <div className="xs:h-76 h-96 bg-[#00367F] px-2 lg:h-60">
       <div className="flex h-full flex-col justify-between text-center text-white">
         <div className="">
           <h1 className="pt-12 text-4xl font-semibold">
-            The mission is to Save live with medicine
+            Our mission is to save lives with medicine quick commerce
           </h1>
           <p className="mx-auto mt-4 text-lg md:w-2/3">
             Be the pioneer in accessing medication within minutes, ensuring your
@@ -35,19 +35,19 @@ export default function Footer() {
           <Link href="#">
             <FontAwesomeIcon
               icon={faFacebook}
-              className="mb-1 mr-4 inline w-5 text-white hover:text-[#1877F2]"
+              className="mb-1 mr-4 inline w-5 text-white transition duration-500 ease-in-out hover:text-[#1877F2]"
             />
           </Link>
           <Link href="#">
             <FontAwesomeIcon
               icon={faInstagram}
-              className="mb-1 mr-4 inline w-5 text-white hover:text-[#C13584]"
+              className="duration-500mb-1 mr-4 inline w-5 text-white transition ease-in-out hover:text-[#C13584]"
             />
           </Link>
           <Link href="#">
             <FontAwesomeIcon
               icon={faTwitter}
-              className="mb-1 mr-4 inline w-5 text-white hover:text-[#1DA1F2]"
+              className="duration-500mb-1 mr-4 inline w-5 text-white transition ease-in-out hover:text-[#1DA1F2]"
             />
           </Link>
         </div>

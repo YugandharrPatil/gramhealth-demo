@@ -40,7 +40,7 @@ export default function Form() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex gap-4">
+      <div className="flex gap-4 max-sm:flex-col">
         <Input
           {...register("email", {
             required: "Please enter an email",
@@ -55,7 +55,7 @@ export default function Form() {
         />
         <Button
           disabled={isSubmitting}
-          className={`font-bold uppercase ${inter.variable} rounded-sm font-inter text-lg`}
+          className={`h-14 font-bold uppercase ${inter.variable} rounded-sm font-inter text-lg`}
           variant="blue"
           size="blue"
         >

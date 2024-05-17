@@ -1,12 +1,12 @@
 import backgroundImage from "../../public/background.png";
 
-import { arialRoundedMTBold, montserrat, poppins } from "../utils/fonts/fonts";
+import { arialRoundedMTBold, montserrat, poppins } from "@/utils/fonts/fonts";
 
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const textContent = {
-  heading: "GramHealth",
+const TEXT_CONTENT = {
+  heading: "GramHealth.",
   subHeading: "30 minute medicine delivery",
   soon: "coming soon",
   location: "Kolkata",
@@ -18,45 +18,45 @@ const textContent = {
 export default function Header() {
   return (
     <header
-      className="h-screen w-full bg-black bg-cover bg-top bg-no-repeat"
+      className="my-auto h-screen w-full bg-black bg-cover bg-top bg-no-repeat"
       style={{
         backgroundImage: `url(${backgroundImage.src})`,
       }}
     >
-      <div className="flex h-full flex-col items-center justify-center text-center">
+      <div className="container flex h-full flex-col items-center justify-center px-2">
         <h1
-          className={`${montserrat.variable} inline-block bg-gradient-to-r from-[#004AAD] from-30% to-[#2EEB31] bg-clip-text font-montserrat text-5xl font-bold text-transparent xs:text-6xl sm:text-7xl lg:text-8xl xl:text-8xl 2xl:text-10xl`}
+          className={`${montserrat.variable} heading-gradient font-montserrat text-3xl font-bold min-[400px]:text-6xl sm:text-7xl lg:text-8xl 3xl:text-9xl`}
         >
-          {textContent.heading}
+          {TEXT_CONTENT.heading}
         </h1>
         <h2
-          className={`mt-3 ${montserrat.variable} font-montserrat text-xl font-semibold uppercase text-white md:text-2xl lg:text-3xl 2xl:text-5xl`}
+          className={`mt-3 text-xl sm:text-2xl lg:text-3xl 3xl:text-4xl ${montserrat.variable} font-montserrat font-semibold uppercase text-white`}
         >
-          {textContent.subHeading}
+          {TEXT_CONTENT.subHeading}
         </h2>
         <h3
-          className={`mt-8 xs:mt-12 ${poppins.variable} font-poppins text-lg font-semibold uppercase text-white xs:text-2xl 2xl:text-4xl`}
+          className={`mt-12 ${poppins.className} font-poppins text-xl font-semibold uppercase text-white sm:text-2xl lg:text-3xl 3xl:text-4xl`}
         >
-          {textContent.soon}
+          {TEXT_CONTENT.soon}
         </h3>
         <div
-          className={`mx-auto mt-2 w-fit border-2 border-white px-10 py-1 text-lg text-white xs:mt-5 xs:px-24 xs:py-2 xs:text-2xl 2xl:text-4xl ${poppins.variable} font-poppins`}
+          className={`relative mx-auto mt-5 rounded-lg border-2 border-white px-28 py-3 text-center text-2xl text-white 3xl:text-4xl ${poppins.className} font-poppins`}
         >
           <FontAwesomeIcon
             icon={faLocationDot}
-            className="mb-1 mr-3 inline w-4 text-white xs:w-5"
+            className="absolute left-6 inline w-5 text-white max-sm:top-4 sm:w-6 3xl:top-4"
           />
-          {textContent.location}
+          {TEXT_CONTENT.location}
         </div>
         <p
-          className={`${arialRoundedMTBold.className} text-md mx-auto mt-8 max-w-5xl px-2 text-center font-semibold text-white xs:mt-28 xs:text-2xl sm:text-3xl 2xl:text-5xl`}
+          className={`${arialRoundedMTBold.className} text-md mx-auto mt-28 max-w-5xl text-center text-xl font-semibold text-white sm:text-2xl lg:text-3xl 3xl:text-4xl`}
         >
-          {textContent.tagLine}
+          {TEXT_CONTENT.tagLine}
         </p>
         <p
-          className={`mt-2 text-white xs:mt-6 ${poppins.variable} px-2 font-poppins text-lg font-semibold sm:text-xl 2xl:text-3xl`}
+          className={`mt-6 text-white ${poppins.className} px-2 text-center font-poppins text-lg font-semibold sm:text-xl 3xl:text-3xl`}
         >
-          {textContent.by}
+          {TEXT_CONTENT.by}
         </p>
       </div>
     </header>
