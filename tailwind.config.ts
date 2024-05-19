@@ -28,6 +28,9 @@ const config = {
       // },
     },
     extend: {
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(67deg, #2275FB 0%, #0C9FEB 100%)",
+      },
       // fontSize: {
       //   "10xl": "9rem",
       // },

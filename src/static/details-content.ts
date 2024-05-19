@@ -1,9 +1,16 @@
-// ICONS
-import check from "../../public/icons/check.png";
-import delivery from "../../public/icons/delivery.png";
-import handshake from "../../public/icons/handshake.png";
-import shield from "../../public/icons/shield.png";
+// // GRADIENT ICONS IMAGES
 
+// import check from "../../public/icons/check.png";
+// import delivery from "../../public/icons/delivery.png";
+// import handshake from "../../public/icons/handshake.png";
+// import shield from "../../public/icons/shield.png";
+
+import delivery from "../../public/icons/ic_deliver.svg";
+import handshake from "../../public/icons/ic_farm.svg";
+import shield from "../../public/icons/ic_med.svg";
+import check from "../../public/icons/ic_qual.svg";
+
+// CARD COMPONENT ICONS
 import box from "../../public/card-icons/box.png";
 import deliveryBox from "../../public/card-icons/delivery.png";
 import feedback from "../../public/card-icons/feedback.png";
@@ -24,7 +31,7 @@ export const iconContent = {
   },
   icon4: {
     imgSrc: delivery,
-    text: "DOOR STEP DELIVERY",
+    text: "Door Step Delivery",
   },
 };
 
